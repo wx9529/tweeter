@@ -1,0 +1,33 @@
+.button {
+  background-color: #4056a1;
+  color: white;
+}
+h2 {
+  text-align: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  font-family: "Source Sans Pro";
+  font-weight: 600;
+}
+textarea {
+  border: none;
+  outline: none;
+  border-bottom: 3px solid #545149;
+  background-color: #f4f1ec;
+  margin-bottom: 20px;
+}
+.bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "Bungee";
+  font-size: medium;
+  margin-bottom: 20px;
+}
+#tweet-text {
+  font-weight: 600;
+  font-size: medium;
+  resize: none;
+}

@@ -1,0 +1,30 @@
+.nav-header {
+  background-color: #4056a1;
+  color: #ffffff;
+  height: 120px;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  z-index: 9;
+  position: relative;
+}
+.nav-left {
+  font-family: "Bungee";
+  line-height: 120px;
+}
+.nav-right {
+  font-size: 15px;
+  line-height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav-right-font {
+  font-family: "Source Sans Pro";
+  height: 57%;
+}
+.nav-right > i {
+  color: red;
+}
