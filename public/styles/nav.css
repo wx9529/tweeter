@@ -8,7 +8,9 @@
   flex-direction: row;
   justify-content: space-between;
   z-index: 9;
-  position: relative;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 .nav-left {
   font-family: "Bungee";

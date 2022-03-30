@@ -1,4 +1,4 @@
-#all-tweet {
+#tweet {
   font-family: "Source Sans Pro";
   font-weight: 600;
   margin: 20px -10px 20px -10px;
@@ -34,22 +34,28 @@
 .all-tweet-header-left > a {
   font-size: large;
   font-weight: 300;
+  margin-top: 5px;
+  margin-left: 10px;
 }
 .all-tweet-header > a {
   font-size: large;
   font-weight: 600;
   color: lightsteelblue;
-  margin-top: 20px;
+  margin-top: 25px;
   margin-right: 20px;
 }
 
 time {
   font-size: small;
-  font-weight: 300;
+  font-weight: 600;
 }
 .all-tweet-content > p {
   margin-left: 20px;
 }
 #logo i {
   color: #4056a1;
+}
+.all-tweet-header-left > img {
+  width: 30px;
+  height: 30px;
 }
