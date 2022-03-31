@@ -18,15 +18,16 @@
 }
 .nav-right {
   font-size: 15px;
-  line-height: 120px;
+  line-height: 105px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .nav-right-font {
   font-family: "Source Sans Pro";
-  height: 57%;
+  height: 50%;
 }
 .nav-right > i {
   color: red;
+  position: relative;
 }

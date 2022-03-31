@@ -2,9 +2,6 @@
   background-color: #4056a1;
   color: white;
 }
-h2 {
-  text-align: center;
-}
 form {
   display: flex;
   flex-direction: column;
@@ -30,4 +27,18 @@ textarea {
   font-weight: 600;
   font-size: medium;
   resize: none;
+}
+.error {
+  font-family: "Source Sans Pro";
+  font-weight: SemiBold 600;
+  color: #d8000c;
+  background-color: #ffbaba;
+  background-image: url("https://i.imgur.com/GnyDvKN.png");
+  background-repeat: no-repeat;
+  border: 1px solid;
+  margin: 70px auto 40px 0;
+  padding: 15px 10px 15px 50px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  display: none;
 }
