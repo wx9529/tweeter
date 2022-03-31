@@ -13,6 +13,12 @@ $(() => {
 
   $("#arrow").on("click", function () {
     $("#target").slideToggle();
+    console.log($("#target").is(":visible"));
+    if ($("#target").is(":hidden")) {
+      $("#tweet-text").blur();
+    } else {
+      $("#tweet-text").focus();
+    }
   });
 
   const escape = function (str) {
@@ -26,7 +32,6 @@ $(() => {
       renderTweets(data);
     });
   };
-  loadTweets();
 
   // loops through tweets
   // calls createTweetElement for each tweet
@@ -81,6 +86,7 @@ $(() => {
         $(".error").slideDown("slow");
         return;
       }
+      $(".counter").text(140);
       $(".error").slideUp("slow");
       $.ajax({ url: "/tweets", method: "POST", data: data }).then(() => {
         loadTweets();
