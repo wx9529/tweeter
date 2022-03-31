@@ -43,4 +43,15 @@ $(() => {
       $(this).css({ color: "#4056a1" });
     }
   );
+
+  //display ScrollToTop button when scrolling
+  $(window).scroll(function () {
+    $(btnScrollToTop).css({ display: "block" });
+  });
+
+  //Scroll to top and enable textare When clicking the button
+  $(btnScrollToTop).on("click", function () {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+    $("#target").slideDown();
+  });
 });

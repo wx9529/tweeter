@@ -5,9 +5,16 @@
  */
 
 $(() => {
-  $("#arrow").animate({ bottom: "-=200px" }, "slow", () => {
-    $("#arrow").animate({ top: "-=200px" });
+  // JQuery animation
+  setInterval(() => {
+    $("#arrow").animate({ top: "+=7px" }, "slow");
+    $("#arrow").animate({ top: "-=7px" }, "slow");
+  }, 20);
+
+  $("#arrow").on("click", function () {
+    $("#target").slideToggle();
   });
+
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
