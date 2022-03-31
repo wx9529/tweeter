@@ -13,7 +13,6 @@ $(() => {
 
   $("#arrow").on("click", function () {
     $("#target").slideToggle();
-    console.log($("#target").is(":visible"));
     if ($("#target").is(":hidden")) {
       $("#tweet-text").blur();
     } else {
@@ -27,17 +26,21 @@ $(() => {
     return div.innerHTML;
   };
   //fetching tweets and render html
-  const loadTweets = function () {
+  // The loadtweets function will use jQuery to make a request to /tweets and receive the array of tweets as JSON.
+  const loadTweets = function (event) {
     $.ajax({ url: "/tweets", method: "GET" }).then(function (data) {
       renderTweets(data);
     });
   };
+  loadTweets();
 
   // loops through tweets
   // calls createTweetElement for each tweet
   // takes return value and appends it to the tweets container
+  // which can take in this array of objects and render them to the DOM
   function renderTweets(tweets) {
     const $tweetsContainer = $("#tweets-container");
+    $tweetsContainer.empty();
     for (const tweet of tweets) {
       const $newtweet = createTweetElement(tweet);
       $tweetsContainer.prepend($newtweet);
@@ -47,7 +50,7 @@ $(() => {
 
   //return a tweet element
   function createTweetElement(tweetData) {
-    const $tweet = $(`<article id="tweet">
+    const $tweet = $(`<article  id="tweet">
     <header class = "all-tweet-header">
            <div class = "all-tweet-header-left">
             <img src=${escape(tweetData.user.avatars)}> 
@@ -62,8 +65,8 @@ $(() => {
             <time>${escape(timeago.format(tweetData.created_at))}</time>
             <div id = "logo">
              <i id = "flag" class="fa-solid fa-flag"></i>
-             <i id = "retweet" class="fa-solid fa-arrow-up-right-from-square"></i>
-             <i id = "heart" class="fa-solid fa-heart"></i>
+             <i  id = "retweet" class="fa-solid fa-arrow-up-right-from-square"></i>
+             <i  id = "heart" class="fa-solid fa-heart"></i>
             </div>
           </footer>
      </article>`);
@@ -71,28 +74,26 @@ $(() => {
   }
 
   // Submit a form use ajax
-  function sendTweet() {
-    $("#target").submit(function (event) {
-      event.preventDefault();
-      const data = $(this).serialize();
-      const $tweetValue = $($(this).children()[1]);
-      if ($tweetValue.val().length > 140) {
-        $(".error").text("Too long.Please limit your text of 140 chars.");
-        $(".error").slideDown("slow");
-        return;
-      }
-      if ($tweetValue.val().length === 0) {
-        $(".error").text("Text can't be empty");
-        $(".error").slideDown("slow");
-        return;
-      }
-      $(".counter").text(140);
-      $(".error").slideUp("slow");
-      $.ajax({ url: "/tweets", method: "POST", data: data }).then(() => {
-        loadTweets();
-      });
-      $tweetValue.val(null);
+  $("#target").submit(function (event) {
+    event.preventDefault();
+    const data = $(this).serialize();
+    const $tweetValue = $($(this).children()[1]);
+    if ($tweetValue.val().length > 140) {
+      $(".error").text("Too long.Please limit your text of 140 chars.");
+      $(".error").slideDown("slow");
+      return;
+    }
+    if ($tweetValue.val().length === 0) {
+      $(".error").text("Text can't be empty");
+      $(".error").slideDown("slow");
+      return;
+    }
+    $(".counter").text(140);
+    $(".error").slideUp("slow");
+    $.ajax({ url: "/tweets", method: "POST", data: data }).then(() => {
+      const $tweetsContainer = $("#tweets-container");
+      loadTweets(); 
     });
-  }
-  sendTweet();
+    $tweetValue.val(null);
+  });
 });

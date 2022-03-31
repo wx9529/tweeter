@@ -11,39 +11,7 @@ $(() => {
       counter.css({ color: "unset" });
     }
   });
-  $("#tweet").hover(
-    function () {
-      $(this).css({ "box-shadow": "5px 5px #b0c4de" });
-    },
-    function () {
-      $(this).css({ "box-shadow": "unset" });
-    }
-  );
-  $("#flag").hover(
-    function () {
-      $(this).css({ color: "rgb(204, 204, 61)" });
-    },
-    function () {
-      $(this).css({ color: "#4056a1" });
-    }
-  );
-  $("#retweet").hover(
-    function () {
-      $(this).css({ color: "rgb(204, 204, 61)" });
-    },
-    function () {
-      $(this).css({ color: "#4056a1" });
-    }
-  );
-  $("#heart").hover(
-    function () {
-      $(this).css({ color: "rgb(204, 204, 61)" });
-    },
-    function () {
-      $(this).css({ color: "#4056a1" });
-    }
-  );
-
+ 
   //display ScrollToTop button when scrolling down
   $(window).scroll(function (event) {
     event.preventDefault();

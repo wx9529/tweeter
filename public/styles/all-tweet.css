@@ -74,3 +74,17 @@ time {
   cursor: pointer;
   display: none;
 }
+
+#retweet:hover {
+  color: rgb(204, 204, 61);
+}
+#heart:hover {
+  color: rgb(204, 204, 61);
+}
+
+#flag:hover {
+  color: rgb(204, 204, 61);
+}
+#tweet:hover {
+  box-shadow: 5px 5px #b0c4de;
+}
