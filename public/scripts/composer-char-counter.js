@@ -1,7 +1,8 @@
 $(() => {
   console.log("DOM has loaded.");
   // JQuery animation
-  // validating textarea
+
+  // form input validation
   $("#tweet-text").on("input", function (event) {
     const textValue = event.target.value;
     const remainCounter = 140 - textValue.length;
@@ -21,15 +22,13 @@ $(() => {
     if (scroll < 150) {
       $("#btnScrollToTop").hide();
       $(".nav-header").show();
-      // $(".header").css({ "margin-top": "120px" });
     } else {
       $("#btnScrollToTop").show();
       $(".nav-header").hide();
-      // $(".header").css({ "margin-top": "0" });
     }
   });
 
-  //Scroll to top and enable textarea When clicking the button
+  //ScrollToTop button which scroll to top and slide down form textarea
   $("#btnScrollToTop").on("click", function (event) {
     event.preventDefault();
     $("html, body").animate({ scrollTop: 0 }, "slow");

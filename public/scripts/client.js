@@ -70,7 +70,7 @@ $(() => {
     return $tweet;
   }
 
-  // Submit form use ajax
+  // form submission use ajax with error handling
   $("#target").submit(function (event) {
     event.preventDefault();
     const data = $(this).serialize();
