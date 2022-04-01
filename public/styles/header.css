@@ -8,4 +8,10 @@
   justify-content: center;
   align-items: center;
   margin-top: 200px;
+  border-radius: 20px;
+}
+
+#author {
+  font-family: "Bungee";
+  color: #4056a1;
 }

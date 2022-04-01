@@ -45,3 +45,31 @@ main {
   flex-direction: column;
   margin-top: 200px;
 }
+
+@media only screen and (max-width: 768px) {
+  #main-part {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #header-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 35%;
+    padding-right: 20%;
+    background-color: #00a8a8;
+    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+  }
+  #header {
+    display: flex;
+    width: 100%;
+  }
+  .container {
+    margin-top: 40px;
+  }
+  #nav-header {
+    background-color: #00a8a8;
+    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+  }
+}
