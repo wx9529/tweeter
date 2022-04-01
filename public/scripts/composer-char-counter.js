@@ -1,5 +1,7 @@
 $(() => {
   console.log("DOM has loaded.");
+  // JQuery animation
+  // validating textarea
   $("#tweet-text").on("input", function (event) {
     const textValue = event.target.value;
     const remainCounter = 140 - textValue.length;
@@ -11,23 +13,23 @@ $(() => {
       counter.css({ color: "unset" });
     }
   });
- 
+
   //display ScrollToTop button when scrolling down
   $(window).scroll(function (event) {
     event.preventDefault();
     const scroll = $(window).scrollTop();
-    if (scroll === 0) {
+    if (scroll < 150) {
       $("#btnScrollToTop").hide();
       $(".nav-header").show();
-      $(".header").css({ "margin-top": "120px" });
+      // $(".header").css({ "margin-top": "120px" });
     } else {
       $("#btnScrollToTop").show();
       $(".nav-header").hide();
-      $(".header").css({ "margin-top": "0" });
+      // $(".header").css({ "margin-top": "0" });
     }
   });
 
-  //Scroll to top and enable textare When clicking the button
+  //Scroll to top and enable textarea When clicking the button
   $("#btnScrollToTop").on("click", function (event) {
     event.preventDefault();
     $("html, body").animate({ scrollTop: 0 }, "slow");

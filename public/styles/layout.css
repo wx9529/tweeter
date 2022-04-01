@@ -24,9 +24,24 @@ body {
 main {
   width: 90%;
   background-color: #f4f1ec;
-  margin: auto
+  margin: auto;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+#main-part {
+  display: flex;
+  flex-direction: row;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+#header-container {
+  width: 100%;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 200px;
+}
