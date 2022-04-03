@@ -47,7 +47,7 @@ $(() => {
 
   //return a tweet element
   function createTweetElement(tweetData) {
-    const $tweet = $(`<article  id="tweet">
+    const $tweet = $(`<article class="tweet">
     <header class = "all-tweet-header">
            <div class = "all-tweet-header-left">
             <img src=${escape(tweetData.user.avatars)}> 
@@ -60,10 +60,10 @@ $(() => {
           </div>
           <footer class = "all-tweet-footer">
             <time>${escape(timeago.format(tweetData.created_at))}</time>
-            <div id = "logo">
-             <i id = "flag" class="fa-solid fa-flag"></i>
-             <i  id = "retweet" class="fa-solid fa-arrow-up-right-from-square"></i>
-             <i  id = "heart" class="fa-solid fa-heart"></i>
+            <div class = "logo">
+             <i class="fa-solid fa-flag"></i>
+             <i class="fa-solid fa-arrow-up-right-from-square"></i>
+             <i class="fa-solid fa-heart"></i>
             </div>
           </footer>
      </article>`);

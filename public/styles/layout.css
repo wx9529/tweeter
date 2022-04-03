@@ -68,7 +68,7 @@ main {
   .container {
     margin-top: 40px;
   }
-  #nav-header {
+  body .nav-header {
     background-color: #00a8a8;
     background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
   }

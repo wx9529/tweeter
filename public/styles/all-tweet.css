@@ -1,4 +1,4 @@
-#tweet {
+.tweet {
   font-family: "Source Sans Pro";
   font-weight: 600;
   margin: 20px -10px 20px -10px;
@@ -25,11 +25,12 @@
   justify-content: space-between;
   margin: 10px 30px 15px 30px;
 }
-#logo {
+.logo {
   font-size: 15px;
 }
-#logo i {
+.logo i {
   margin-left: 7px;
+  color: #4056a1;
 }
 .all-tweet-header-left > a {
   font-size: large;
@@ -52,9 +53,7 @@ time {
 .all-tweet-content > p {
   margin-left: 20px;
 }
-#logo i {
-  color: #4056a1;
-}
+
 .all-tweet-header-left > img {
   width: 30px;
   height: 30px;
@@ -75,16 +74,10 @@ time {
   display: none;
 }
 
-#retweet:hover {
-  color: rgb(204, 204, 61);
-}
-#heart:hover {
+.logo i:hover {
   color: rgb(204, 204, 61);
 }
 
-#flag:hover {
-  color: rgb(204, 204, 61);
-}
-#tweet:hover {
+#tweets-container .tweet:hover {
   box-shadow: 5px 5px #b0c4de;
 }

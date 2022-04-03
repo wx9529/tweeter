@@ -21,10 +21,10 @@ $(() => {
     const scroll = $(window).scrollTop();
     if (scroll < 150) {
       $("#btnScrollToTop").hide();
-      $(".nav-header").show();
+      $(".nav-header .nav-right").show();
     } else {
       $("#btnScrollToTop").show();
-      $(".nav-header").hide();
+      $(".nav-header .nav-right").hide();
     }
   });
 
